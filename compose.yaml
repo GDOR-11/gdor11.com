@@ -1,0 +1,33 @@
+services:
+
+  homepage_front:
+    build: ./homepage-front
+    volumes:
+      - homepage_static_serve:/usr/local/app/dist
+
+  server_test_front:
+    build: ./server_test-front
+    volumes:
+      - server_test_static_serve:/usr/local/app/dist
+
+  server_test_back:
+    build: ./server_test-back
+    hostname: server_test
+
+  nginx:
+    build: ./nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - homepage_front
+      - server_test_front
+      - server_test_back
+    volumes:
+      - homepage_static_serve:/srv/static_serve/homepage
+      - server_test_static_serve:/srv/static_serve/server_test
+
+
+volumes:
+  homepage_static_serve:
+  server_test_static_serve:

@@ -1,0 +1,32 @@
+services:
+
+  homepage_front:
+    build:
+      target: dev
+    develop:
+      watch:
+        - path: ./homepage-front
+          action: sync
+          target: /usr/local/app
+
+  server_test_front:
+    build:
+      target: dev
+    develop:
+      watch:
+        - path: ./server_test-front
+          action: sync
+          target: /usr/local/app
+
+  server_test_back:
+    build:
+      target: dev
+    develop:
+      watch:
+        - path: ./server_test-back
+          action: sync
+          target: /usr/local/app
+          
+  nginx:
+    build:
+      target: dev

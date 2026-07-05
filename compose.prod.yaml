@@ -1,0 +1,14 @@
+services:
+  nginx:
+    build:
+      target: prod
+    secrets:
+      - fullchain
+      - privkey
+
+
+secrets:
+  fullchain:
+    file: /etc/letsencrypt/live/gdor11.com/fullchain.pem
+  privkey:
+    file: /etc/letsencrypt/live/gdor11.com/privkey.pem
