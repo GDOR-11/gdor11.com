@@ -27,7 +27,7 @@ services:
           action: sync
           target: /usr/local/app
           
-  nginx:
+  gdor11-nginx:
     build:
       target: dev
     ports:
