@@ -14,7 +14,7 @@ services:
     build: ./server_test-back
     hostname: server_test
 
-  nginx:
+  gdor11-nginx:
     build: ./nginx
     depends_on:
       - homepage_front
