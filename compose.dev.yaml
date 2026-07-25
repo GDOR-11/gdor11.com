@@ -30,3 +30,5 @@ services:
   nginx:
     build:
       target: dev
+    ports:
+      - '3000:80'
