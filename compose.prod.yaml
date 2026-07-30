@@ -7,10 +7,13 @@ services:
       - privkey
     networks:
       - gdor11com
+      - router-net
+    hostname: gdor11-nginx
 
   server_test_back:
     networks:
       - gdor11com
+    hostname: server_test
 
 
 secrets:
