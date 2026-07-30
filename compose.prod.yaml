@@ -8,6 +8,10 @@ services:
     networks:
       - gdor11com
 
+  server_test_back:
+    networks:
+      - gdor11com
+
 
 secrets:
   fullchain:

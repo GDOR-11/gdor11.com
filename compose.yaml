@@ -12,7 +12,6 @@ services:
 
   server_test_back:
     build: ./server_test-back
-    hostname: server_test
 
   gdor11-nginx:
     build: ./nginx
