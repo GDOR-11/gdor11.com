@@ -2,8 +2,6 @@ services:
   gdor11-nginx:
     build:
       target: prod
-    ports:
-      - '3000:443'
     secrets:
       - fullchain
       - privkey
